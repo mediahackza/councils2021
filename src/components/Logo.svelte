@@ -2,10 +2,12 @@
 </script>
 
 <div class="logo">
-  <img src="./images/outlier-logo.png" alt="Outlier Logo" />
-  <div class="logo-tagline">
-    Making sense of the world around us through data
-  </div>
+  <a href="https://theoutlier.co.za">
+    <img src="./images/outlier-logo.png" alt="Outlier Logo" />
+    <div class="logo-tagline">
+      Making sense of the world around us through data
+    </div>
+  </a>
 </div>
 
 <style>
