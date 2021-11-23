@@ -52,7 +52,7 @@
 
   <div class="table">
     <table>
-      <tr><th>Municipality</th><th>Council Formed</th></tr>
+      <tr><th>Municipality</th><th>Council Formed</th><th>Mayor</th></tr>
       {#each data as d}
         <tr
           ><td class="label"
@@ -71,7 +71,8 @@
               ? 'confirmed status'
               : 'unconfirmed status'}
             >{d.formed_council}
-          </td></tr
+          </td>
+          <td class="mayor">{d.mayor_party}</td></tr
         >
       {/each}
     </table>
@@ -92,7 +93,7 @@
     color: dodgerblue;
   }
   main {
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom: 30px;
   }
   .confirmed {
@@ -152,5 +153,9 @@
   }
   .light {
     font-weight: 300;
+  }
+  .mayor {
+    font-size: 0.8rem;
+    text-transform: uppercase;
   }
 </style>
