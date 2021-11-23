@@ -5,6 +5,7 @@
   import Icon from './components/Icon.svelte'
 
   export let data = []
+  let count = 0
   async function getData() {
     await fetch(
       'https://api.datadesk.co.za/csvjson.php?table=dd_council_seats_583154'
@@ -14,6 +15,9 @@
         data = response.sort((a, b) =>
           a.Municipality > b.Municipality ? 1 : -1
         )
+
+        let c = data.filter((d) => d.formed_council === 'yes')
+        count = 70 - c.length
         // data.forEach((d) => {
         //   if (d.DA2021 == '') {
         //     d.DA2021 = 0
@@ -37,7 +41,7 @@
     <p>
       There were 70 hung municipalities following the 2021 local government
       elections at the start of November 2021. The deadline for these
-      municipalities to is 23 November 2021. So far XXX of these municipalities
+      municipalities to is 23 November 2021. So far {count} of these 70 municipalities
       are still undecided.
     </p>
     <p>
@@ -52,7 +56,7 @@
       {#each data as d}
         <tr
           ><td class="label"
-            >{d.Municipality}
+            >{d.Municipality} <span class="light">({d.Province})</span>
 
             <div class="seats">
               <Icon name="user" stroke="black" strokeWidth="1" /> SEATS: &nbsp;
@@ -145,5 +149,8 @@
   .blurb {
     text-align: center;
     font-size: 0.9rem;
+  }
+  .light {
+    font-weight: 300;
   }
 </style>
