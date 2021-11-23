@@ -33,6 +33,19 @@
 
 <main>
   <Logo />
+  <div class="blurb">
+    <p>
+      There were 70 hung municipalities following the 2021 local government
+      elections at the start of November 2021. The deadline for these
+      municipalities to is 23 November 2021. So far XXX of these municipalities
+      are still undecided.
+    </p>
+    <p>
+      The table below is <strong>updated automatically</strong> when new information
+      becomes available.
+    </p>
+  </div>
+
   <div class="table">
     <table>
       <tr><th>Municipality</th><th>Council Formed</th></tr>
@@ -59,9 +72,21 @@
       {/each}
     </table>
   </div>
+  <div class="blurb">
+    <br />
+    Join our
+    <a href="https://newsletter.theoutlier.co.za" target="_new">newsletter</a>
+    for more like this. Or follow us on
+    <a href="https://twitter.com/outlierafrica" target="_new"
+      ><Icon name="twitter" stroke="dodgerblue" strokeWidth="2" /></a
+    >.
+  </div>
 </main>
 
 <style>
+  main a {
+    color: dodgerblue;
+  }
   main {
     max-width: 500px;
     margin-bottom: 30px;
@@ -116,5 +141,9 @@
     color: rgb(187, 153, 0);
   }
   .seats {
+  }
+  .blurb {
+    text-align: center;
+    font-size: 0.9rem;
   }
 </style>

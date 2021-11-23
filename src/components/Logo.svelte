@@ -11,6 +11,9 @@
 </div>
 
 <style>
+  .logo a {
+    text-decoration: none;
+  }
   .logo {
     width: 380px;
     margin-bottom: 10px;
