@@ -1,0 +1,120 @@
+<script>
+  // import Router from 'svelte-spa-router'
+  // import { routes } from './routes'
+  import Logo from './components/Logo.svelte'
+  import Icon from './components/Icon.svelte'
+
+  export let data = []
+  async function getData() {
+    await fetch(
+      'https://api.datadesk.co.za/csvjson.php?table=dd_council_seats_583154'
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        data = response.sort((a, b) =>
+          a.Municipality > b.Municipality ? 1 : -1
+        )
+        // data.forEach((d) => {
+        //   if (d.DA2021 == '') {
+        //     d.DA2021 = 0
+        //   }
+        //   if (d.EFF2021 == '') {
+        //     d.EFF2021 = 0
+        //   }
+        //   if (d.IFP2021 == '') {
+        //     d.IFP2021 = 0
+        //   }
+        // })
+      })
+  }
+
+  let promise = Promise.all([getData()])
+</script>
+
+<main>
+  <Logo />
+  <div class="table">
+    <table>
+      <tr><th>Municipality</th><th>Council Formed</th></tr>
+      {#each data as d}
+        <tr
+          ><td class="label"
+            >{d.Municipality}
+
+            <div class="seats">
+              <Icon name="user" stroke="black" strokeWidth="1" /> SEATS: &nbsp;
+              <span class="anc">ANC {d.ANC2021}</span> &nbsp;
+              <span class="da">DA {d.DA2021}</span> &nbsp;
+              <span class="eff">EFF {d.EFF2021}</span> &nbsp;
+              <span class="ifp">IFP {d.IFP2021}</span> &nbsp;
+              <span class="other">OTHERS {d.Others2021}</span>
+            </div></td
+          ><td
+            class={d.formed_council === 'yes'
+              ? 'confirmed status'
+              : 'unconfirmed status'}
+            >{d.formed_council}
+          </td></tr
+        >
+      {/each}
+    </table>
+  </div>
+</main>
+
+<style>
+  main {
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  .confirmed {
+    /* background: rgb(234, 247, 234); */
+  }
+  .unconfirmed {
+    background: #bd3131;
+    color: #fff;
+  }
+  table {
+    border-collapse: collapse;
+    font-family: var(--headerFont);
+  }
+  td {
+    border: solid 3px #eee;
+    background: #fff;
+    padding: 10px;
+  }
+  th {
+    border: solid 3px #eee;
+    padding: 10px;
+    background: #fff;
+    background: #000;
+    color: #fff;
+  }
+  .status {
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+  .label {
+    font-weight: 700;
+    /* background: none; */
+  }
+  .seats {
+    font-weight: 300;
+    font-size: 0.7rem;
+  }
+  .anc {
+    color: green;
+  }
+  .da {
+    color: dodgerblue;
+  }
+  .eff {
+    color: indianred;
+  }
+  .ifp {
+    color: rgb(187, 153, 0);
+  }
+  .seats {
+  }
+</style>
