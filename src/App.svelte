@@ -59,12 +59,12 @@
             >{d.Municipality} <span class="light">({d.Province})</span>
 
             <div class="seats">
-              <Icon name="user" stroke="black" strokeWidth="1" /> SEATS: &nbsp;
-              <span class="anc">ANC {d.ANC2021}</span> &nbsp;
-              <span class="da">DA {d.DA2021}</span> &nbsp;
-              <span class="eff">EFF {d.EFF2021}</span> &nbsp;
-              <span class="ifp">IFP {d.IFP2021}</span> &nbsp;
-              <span class="other">OTHERS {d.Others2021}</span>
+              <Icon name="user" stroke="black" strokeWidth="1" /> SEATS:<br />
+              <span class="anc">ANC&nbsp;{d.ANC2021}</span> &nbsp;
+              <span class="da">DA&nbsp;{d.DA2021}</span> &nbsp;
+              <span class="eff">EFF&nbsp;{d.EFF2021}</span> &nbsp;
+              <span class="ifp">IFP&nbsp;{d.IFP2021}</span> &nbsp;
+              <span class="other">OTHERS&nbsp;{d.Others2021}</span>
             </div></td
           ><td
             class={d.formed_council === 'yes'
@@ -132,6 +132,8 @@
   .seats {
     font-weight: 300;
     font-size: 0.7rem;
+    line-height: 0.9rem;
+    margin-top: 5px;
   }
   .anc {
     color: green;
