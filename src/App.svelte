@@ -5,7 +5,7 @@
   import Icon from './components/Icon.svelte'
 
   export let data = []
-  let count = 0
+  let count = null
   async function getData() {
     await fetch(
       'https://api.datadesk.co.za/csvjson.php?table=dd_council_seats_583154'
@@ -40,9 +40,9 @@
   <div class="blurb">
     <p>
       There were 70 hung municipalities following the 2021 local government
-      elections at the start of November 2021. The deadline for these
-      municipalities to is 23 November 2021. So far {count} of these 70 municipalities
-      are still undecided.
+      elections at the start of November 2021. The deadline to constitute these
+      councils was 23 November 2021. So far {count} of these 70 municipalities are
+      still undecided.
     </p>
     <p>
       The table below is <strong>updated automatically</strong> when new information
