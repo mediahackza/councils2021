@@ -36,6 +36,15 @@
 </script>
 
 <main>
+  <div class="blurb top-blurb">
+    <br />
+    Sign our
+    <a href="https://newsletter.theoutlier.co.za" target="_new">newsletter</a>
+    for more data stories like this. Or follow us on
+    <a href="https://twitter.com/outlierafrica" target="_new"
+      ><Icon name="twitter" stroke="dodgerblue" strokeWidth="2" /></a
+    >.
+  </div>
   <Logo />
   <div class="blurb">
     <p>
@@ -45,9 +54,21 @@
       still undecided.
     </p>
     <p>
-      The table below is <strong>updated automatically</strong> when new information
+      On the map below the councils that have not yet been finalised are in <span
+        style="color: #D6604D;">red</span
+      >
+      and those that have are in <span style="color: #4393C3;">blue.</span>
+    </p>
+    <p>
+      This table and map are <strong>updated automatically</strong> when new information
       becomes available.
     </p>
+  </div>
+
+  <div class="map">
+    <div class="flourish-embed flourish-map" data-src="visualisation/7951336">
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
+    </div>
   </div>
 
   <div class="table">
@@ -159,5 +180,12 @@
   .mayor {
     font-size: 0.8rem;
     text-transform: uppercase;
+  }
+  .top-blurb a {
+    color: #000;
+  }
+  .top-blurb {
+    border-bottom: solid 1px rgb(168, 168, 168);
+    padding-bottom: 10px;
   }
 </style>
