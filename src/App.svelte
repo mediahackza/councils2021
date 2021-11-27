@@ -66,8 +66,28 @@
   </div>
 
   <div class="map">
-    <div class="flourish-embed flourish-map" data-src="visualisation/7951336">
-      <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <iframe
+      src="https://flo.uri.sh/visualisation/7951336/embed"
+      title="Interactive or visual content"
+      class="flourish-embed-iframe"
+      frameborder="0"
+      scrolling="no"
+      sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+    />
+    <div
+      style="width:100%!;margin-top:4px!important;text-align:right!important;"
+    >
+      <a
+        class="flourish-credit"
+        href="https://public.flourish.studio/visualisation/7951336/?utm_source=embed&utm_campaign=visualisation/7951336"
+        target="_top"
+        style="text-decoration:none!important"
+        ><img
+          alt="Made with Flourish"
+          src="https://public.flourish.studio/resources/made_with_flourish.svg"
+          style="width:105px!important;height:16px!important;border:none!important;margin:0!important;"
+        />
+      </a>
     </div>
   </div>
 
@@ -187,5 +207,15 @@
   .top-blurb {
     border-bottom: solid 1px rgb(168, 168, 168);
     padding-bottom: 10px;
+  }
+  .flourish-embed-iframe {
+    width: 100%;
+    height: 500px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .flourish-embed-iframe {
+      height: 450px;
+    }
   }
 </style>
