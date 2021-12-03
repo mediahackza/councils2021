@@ -50,8 +50,12 @@
     <p>
       There were 70 hung municipalities following the 2021 local government
       elections at the start of November 2021. The deadline to constitute these
-      councils was 23 November 2021. So far {count} of these 70 municipalities are
-      still undecided.
+      councils was 23 November 2021. On 2&nbsp;December&nbsp;2021 the
+      Modimolle-Mookgophong municipality in Limpopo, was the last to finalise a
+      council by <a
+        href="https://www.news24.com/news24/southafrica/news/heads-or-tails-r1-coin-toss-ensures-da-councillor-elected-mayor-in-limpopo-20211202"
+        target="_blank">coin toss</a
+      >.
     </p>
     <p>
       On the map below the councils that have not yet been finalised are in <span
